@@ -1,4 +1,4 @@
-import { Pagination, Table, Tag } from "antd";
+import {Table, Tag } from "antd";
 import React from "react";
 import { Container } from "react-bootstrap";
 const AppForm = ({ person }) => {

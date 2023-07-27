@@ -1,10 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Layout, theme } from "antd";
-import AppLabel from "./AppLabel";
-import { Container } from "react-bootstrap";
-import { Data } from "./AppData";
-import AppForm from "./AppForm";
-import AppAction from "./AppActions";
 
 const { Content } = Layout;
 
