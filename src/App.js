@@ -12,12 +12,12 @@ const App = ({ children }) => {
   const notify = (message, type) => {
     switch (type) {
       case "success":
-        return toast.success(message,{
-          autoClose:500
+        return toast.success(message, {
+          autoClose: 500,
         });
       case "error":
-        return toast.error(message,{
-          autoClose:500
+        return toast.error(message, {
+          autoClose: 500,
         });
       default:
         return null;
@@ -26,11 +26,15 @@ const App = ({ children }) => {
   const [person, setPerson] = useState(Data);
   const showData = () => {
     setPerson(Data);
-    notify("Data Showed Successfly", "success");
+    person.length !== 0
+      ? notify("The Dates Are Basically Shown", "error")
+      : notify("Data Showed Successfly", "success");
   };
   const deleteData = () => {
     setPerson([]);
-    notify("Data Deleted Successfly", "error");
+    person.length !== 0
+      ? notify("Data Deleted Successfly", "success")
+      : notify("The Dates Are Basically Deleted", "error");
   };
   return (
     <Navbar>
